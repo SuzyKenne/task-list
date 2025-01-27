@@ -17,7 +17,6 @@
         <form action="{{ route('tasks.destroy', ['task' => $task->id])}}" method="POST"">
             @csrf
             @method('DELETE')
-            //delete task button
             <button type="submit">Delete</button>
         </form>
     </div>
