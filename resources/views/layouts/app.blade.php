@@ -36,9 +36,15 @@
 <body class="container mx-auto mt-10 mb-10 max-w-lg">
     <h1 class="text-4xl text-center text-green-700 font-bold">@yield('title')</h1>
     <div>
-        @if (session()->has('success'))
-            <div>{{ session('success') }}</div>
-        @endif
+        {{-- @if (session()->has('success')) --}}
+            {{-- <div>{{ session('success') }}</div> --}}
+            <div class=" relative mb-10 rounded border border-green-700 text-lg text-green-700 bg-green-100 px-4 py-3" role="alert">
+                <strong class="font-bold">Success!</strong>
+                <div>This is a flash message!</div>
+
+               
+            </div>
+        {{-- @endif --}}
         @yield('content')
     </div>
 </body>
